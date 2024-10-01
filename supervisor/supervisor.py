@@ -271,7 +271,7 @@ class Supervisor(CoreSysAttributes):
         timeout = aiohttp.ClientTimeout(total=10)
         try:
             await self.sys_websession.head(
-                "https://checkonline.home-assistant.io/online.txt", timeout=timeout
+                "https://version.homebotautomation.com/online.txt", timeout=timeout
             )
         except (ClientError, TimeoutError):
             self.connectivity = False
